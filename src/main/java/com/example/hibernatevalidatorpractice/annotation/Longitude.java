@@ -1,6 +1,6 @@
 package com.example.hibernatevalidatorpractice.annotation;
 
-import com.example.hibernatevalidatorpractice.validator.LatitudeValidator;
+import com.example.hibernatevalidatorpractice.validator.LongitudeValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -16,11 +16,11 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 @Target({METHOD, FIELD, ANNOTATION_TYPE, PARAMETER})
 @Retention(RUNTIME)
-@Constraint(validatedBy = LatitudeValidator.class)
+@Constraint(validatedBy = LongitudeValidator.class)
 @Documented
-public @interface Latitude {
+public @interface Longitude {
 
-    String message() default "Invalid Latitude";
+    String message() default "Invalid Longitude";
 
     Class<?>[] groups() default {};
 
